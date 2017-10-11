@@ -1,0 +1,13 @@
+---
+resources:
+- name: resource-tutorial
+  type: docker-image
+  source:
+    repository: davidharris/gpdb-m
+    username: root
+    password: pivotal
+
+jobs:
+- name: job-gp
+  plan:
+  - get: resource-tutorial
