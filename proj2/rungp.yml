@@ -3,7 +3,7 @@ resources:
 - name: resource-tutorial
   type: docker-image
   source:
-    repository: davidharris/gpdb-m
+    repository: bramhalldata/gpdb-m
     username: root
     password: pivotal
 
