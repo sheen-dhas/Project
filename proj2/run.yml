@@ -7,7 +7,11 @@ image_resource:
 
 inputs:
   - name: resource-tutorial
-  
-run:
-  path: resource-tutorial/proj2/create.sh
+
+jobs:
+- name: run-git
+  public: true
+  plan:
+    run:
+      path: resource-tutorial/proj2/create.sh
   
