@@ -6,6 +6,7 @@ image_resource:
   source: {repository: golang, tag: 1.6-alpine}
 
 inputs:
+  public: true
 - name: resource-tutorial
   
 run:
