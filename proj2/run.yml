@@ -9,4 +9,4 @@ inputs:
   - name: resource-tutorial
 
 run:
-  path: ./resource-tutorial/proj2/create.sh
+  path: ./proj2/create.sh
