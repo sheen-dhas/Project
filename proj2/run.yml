@@ -6,8 +6,9 @@ image_resource:
   source: {repository: golang, tag: 1.6-alpine}
 
 inputs:
-  public: true
-- name: resource-tutorial
+  - name: resource-tutorial
   
 run:
+  public: true
   path: resource-tutorial/proj2/create.sh
+  
