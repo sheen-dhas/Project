@@ -6,5 +6,4 @@ image_resource:
   source: {repository: ubuntu}
 
 run:
-  path: C:\Users\shiris1\Downloads\
-  args: ["./create.sh"]
+  path: ./vagrant/Project/proj2/create.sh
