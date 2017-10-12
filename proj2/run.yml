@@ -10,3 +10,5 @@ inputs:
 
 run:
   path: resource-tutorial/proj2/create.sh
+  args:
+  - -exc
