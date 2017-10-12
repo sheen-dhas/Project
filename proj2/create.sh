@@ -1,3 +1,3 @@
 #!/bin/sh
-chmod 777 resource-tutorial/proj2/create.sh
+chmod 777 resource-tutorial/*
 echo "hi"
