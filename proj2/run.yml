@@ -9,4 +9,4 @@ inputs:
 - name: proj2
 
 run:
-  path: ./proj2/task_show_uname.sh
+  path: ./proj2/create.sh
