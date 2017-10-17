@@ -11,6 +11,3 @@ inputs:
 run:
   path: sh
   args:
-  - -exc
-  - |
-  cd resource-tutorial/proj2
