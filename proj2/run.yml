@@ -11,3 +11,5 @@ inputs:
 run:
   path: sh
   args:
+        - -exc
+        - |
