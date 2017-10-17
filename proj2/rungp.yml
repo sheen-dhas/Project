@@ -6,7 +6,7 @@ image_resource:
   source: 
          repository: pivotaldata/gpdb-base
          port : 2022
-         username: root
+         username: gpadmin
          password: pivotal
 
 inputs:
