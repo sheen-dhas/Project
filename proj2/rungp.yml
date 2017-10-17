@@ -5,8 +5,8 @@ image_resource:
   type: docker-image
   source: 
          repository: pivotaldata/gpdb-base
-         username:root
-         password:pivotal
+         username: root
+         password: pivotal
 
 inputs:
 - name: resource-tutorial
