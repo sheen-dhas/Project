@@ -6,7 +6,7 @@ image_resource:
   source: {repository: busybox}
 
 inputs:
-  - name: proj2
+- name: proj2
 
 run:
-  path: ./proj2/create.sh
+  path: ./proj2/task_show_uname.sh
