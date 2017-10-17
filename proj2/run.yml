@@ -14,4 +14,5 @@ run:
         - -exc
         - |
           cd resource-tutorial/proj2
+          chmod 777 create.sh
           ./create.sh
