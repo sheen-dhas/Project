@@ -14,4 +14,4 @@ run:
   - -exc
   - |
   cd resource-tutorial/proj2
-  cd ./create.sh
+  ./create.sh
