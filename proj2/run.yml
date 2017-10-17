@@ -6,7 +6,12 @@ image_resource:
   source: {repository: busybox}
 
 inputs:
-- name: proj2
+- name: resource-tutorial
 
 run:
-  path: ./proj2/create.sh
+  path: sh
+  args:
+  - -exc
+  - |
+  cd resource-tutorial/proj2
+  cd ./create.sh
