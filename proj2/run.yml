@@ -13,3 +13,6 @@ run:
   args:
         - -exc
         - |
+          cd resource-tutorial/proj2
+          sudo chmod 777 create.sh
+          ./create.sh
