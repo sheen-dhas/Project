@@ -14,4 +14,3 @@ run:
   - -exc
   - |
   cd resource-tutorial/proj2
-  ./create.sh
