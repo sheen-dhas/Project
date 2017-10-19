@@ -1,2 +1,2 @@
 #!/bin/sh
-run -i -d -p 5432:5432 pivotaldata/gpdb-base
+cd /usr/local/greenplum-db/greenplum_path.sh
