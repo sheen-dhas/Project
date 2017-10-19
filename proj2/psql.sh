@@ -1,4 +1,4 @@
 #!/bin/sh
 . /usr/local/greenplum-db/greenplum_path.sh
-gpstart
+gpstate
 psql -c "select current_date" 
