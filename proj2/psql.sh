@@ -1,2 +1,2 @@
 #!/bin/sh
-echo '\x \\ create database trial;' | psql
+psql -c  "select current_date"  
