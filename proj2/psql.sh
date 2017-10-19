@@ -1,6 +1,6 @@
 #!/bin/sh
 . /usr/local/greenplum-db/greenplum_path.sh
-/usr/local/greenplum-db/bin/gpstate
+##/usr/local/greenplum-db/bin/gpstate
 
 ls /data/master/
 
