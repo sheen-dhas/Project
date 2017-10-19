@@ -1,2 +1,2 @@
 #!/bin/sh
-psql -U postgres -c "create database trial"
+su -c "psql -c \"create database trial\"" postgres
