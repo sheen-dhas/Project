@@ -2,7 +2,9 @@
 . /usr/local/greenplum-db/greenplum_path.sh
 ##/usr/local/greenplum-db/bin/gpstate
 
-ls /*
+##ls /*
+
+ls /gpdata/master/*
 
 #/data/master/
 
