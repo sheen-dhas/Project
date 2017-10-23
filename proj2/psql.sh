@@ -5,7 +5,7 @@
 ##ls /*
 
 ls /gpdata/master/*
-ls /gpdata/segments
+ls /gpdata/segments/*
 #/data/master/
 
 #gpstart -d /home
