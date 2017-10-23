@@ -1,11 +1,11 @@
 #!/bin/sh
 . /usr/local/greenplum-db/greenplum_path.sh
-##/usr/local/greenplum-db/bin/gpstate
+. /usr/local/greenplum-db/bin/gpstate -d "/gpdata/segments/gpseg1"
 
 ##ls /*
 
-ls /gpdata/master/*
-ls /gpdata/segments/*
+#ls /gpdata/master/*
+#ls /gpdata/segments/*
 #/data/master/
 
 #gpstart -d /home
