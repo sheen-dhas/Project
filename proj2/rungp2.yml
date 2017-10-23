@@ -16,5 +16,5 @@ run:
         - |
           cd resource-tutorial/proj2
           chmod 777 psql.sh
-          su - gpadmin <<!pivotal!
+          su - gpadmin
           ./psql.sh
