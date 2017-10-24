@@ -13,6 +13,8 @@ chown postgres postgres
 
 cd /
 
+ls
+
 ##cd /usr/lib/postgresql/10/bin/
 su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
 
