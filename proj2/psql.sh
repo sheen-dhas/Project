@@ -10,8 +10,7 @@
 
 cd /usr/lib/postgresql/10/bin/
 ##./postgres 
-su - postgres
-cd /usr/lib/postgresql/10/bin/
+su -c 'su postgres'
 ./pg_ctl start
 
 
