@@ -10,11 +10,9 @@
 
 cd /usr/lib/postgresql/10/bin/
 ##./postgres 
-su - ubuntu <<!
-bf4c7266d2e6c38fc3504a06
+su - postgres
 cd /usr/lib/postgresql/10/bin/
 ./pg_ctl start
-!
 
 
 
