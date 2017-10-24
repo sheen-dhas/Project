@@ -1,2 +1,1 @@
-CREATE schema trial;
-CREATE TABLE trial.weather (city integer, name integer);
+insert into trial.weather (city,name) values (1,121)
