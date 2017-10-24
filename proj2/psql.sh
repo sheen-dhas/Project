@@ -11,8 +11,8 @@
 cd /usr/lib/postgresql/10/bin/
 ##./postgres 
 su -c 'su postgres'
-./pg_ctl start -f a.out
-
+##pg_ctl start -f a.out
+createdb mydb
 
 ##ls /run/*
 
