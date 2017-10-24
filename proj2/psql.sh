@@ -10,7 +10,7 @@
 
 cd /usr/lib/postgresql/10/bin/
 ##./postgres 
-su -c 'su postgres'
+##su -c 'su postgres'
 ##pg_ctl start -f a.out
 createdb mydb
 
