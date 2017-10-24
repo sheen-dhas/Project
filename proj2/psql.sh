@@ -6,7 +6,7 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql "SELECT datname FROM pg_database WHERE datistemplate = false" >> a.out
+. /run/postgresql "SELECT * FROM pg_database" >> a.out
 
 ls /run/*
 
