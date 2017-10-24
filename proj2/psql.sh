@@ -17,7 +17,7 @@ mkdir postgres
 chmod 777 postgres
 
 cd /usr/lib/postgresql/10/bin/
-su - postgres -c 'initdb -D /usr/local/postgres'
+su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
 
 su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -D /usr/local/postgres -l serverlog'
 
