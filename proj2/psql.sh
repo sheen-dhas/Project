@@ -22,7 +22,7 @@ su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -D /usr/local/postgres
 
 su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE schema trial" '
 
-su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather (city integer, name integer)" '
+##su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather (city integer, name integer)" '
 
 ##su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "insert into trial.weather (city,name) values (1,121) " '
 
