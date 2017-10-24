@@ -10,7 +10,7 @@
 
 ls /run/*
 
-. /usr/bin/psql "select * from pg_database"
+. /usr/bin/psql -c "create database trial"
 
 
 ##mydb
