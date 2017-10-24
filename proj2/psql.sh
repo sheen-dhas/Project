@@ -9,7 +9,7 @@
 ##. /run/postgresql "select * from weather"
 
 cd /usr/lib/postgresql/10/bin/
-su - postgres
+sudo -u postgres bash
 pg_ctl start
 
 ##./postgres 
