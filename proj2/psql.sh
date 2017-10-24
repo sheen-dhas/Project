@@ -6,7 +6,9 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql "select * from weather"
+. /run/postgresql "select * from weather" >> a.out
+
+ls /run/*
 
 ##mydb
 
