@@ -19,7 +19,7 @@ su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE schema trial" '
 
 su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather (city integer, name text)" '
 
-su - postgres -c "/usr/lib/postgresql/10/bin/psql -c "insert into trial.weather (city,name) values (1,'aaaa') " "
+su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "insert into trial.weather (city,name) values (1,'aaaa') " '
 
 su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "select * from trial.weather" '
 
