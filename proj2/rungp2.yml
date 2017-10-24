@@ -17,4 +17,3 @@ run:
           cd resource-tutorial/proj2
           chmod 777 psql.sh
           ./psql.sh
-          cat a.out
