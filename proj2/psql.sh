@@ -10,6 +10,7 @@
 
 cd /usr/lib/postgresql/10/bin/
 ##./postgres 
+su - ubuntu
 ./pg_ctl start
 ##ls /run/*
 
