@@ -6,12 +6,15 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql "select * from weather"
+##. /run/postgresql "select * from weather"
 
-ls /run/*
+cd /usr/lib/postgresql/10/bin/
+##./postgres 
+./pg_ctl start
+##ls /run/*
 
-cd /usr/bin/
-psql -c "\d"
+##cd /usr/bin/
+##psql -c "\d"
 
 
 ##mydb
