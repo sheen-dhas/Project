@@ -14,6 +14,8 @@ chmod 777 postgres
 
 cd /usr/lib/postgresql/10/bin/
 su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -l serverlog'
+
+exit;
 ##ls
 
 ##pg_ctl start
