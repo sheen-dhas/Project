@@ -14,7 +14,7 @@ chmod 777 postgres
 
 cd /usr/lib/postgresql/10/bin/
 su - postgres
-ls
+##ls
 
 ##pg_ctl start
 
