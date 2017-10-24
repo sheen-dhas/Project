@@ -2,6 +2,9 @@
 
 ls
 
+cp create.sql /home
+chmod 777 create.sql
+
 cd /home
 mkdir postgres
 chmod 777 postgres
@@ -11,11 +14,6 @@ mkdir postgres
 chmod 777  postgres
 chown postgres postgres
 
-cd /home
-
-cd ..
-
-ls
 
 ##cd /usr/lib/postgresql/10/bin/
 su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
