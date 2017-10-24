@@ -10,7 +10,7 @@
 
 ls /run/*
 
-. /usr/bin/psql -c "create database trial"
+. /usr/bin/psql -c "\d"
 
 
 ##mydb
