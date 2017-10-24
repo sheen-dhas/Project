@@ -6,9 +6,11 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql "select * from weather" >> a.out
+. /run/postgresql "SELECT datname FROM pg_database WHERE datistemplate = false" >> a.out
 
 ls /run/*
+
+echo < a.out
 
 ##mydb
 
