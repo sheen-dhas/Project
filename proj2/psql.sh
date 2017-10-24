@@ -6,7 +6,7 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql CREATE TABLE weather (city varchar(80))
+. /run/postgresql "CREATE TABLE weather (city varchar(80))"
 
 
 ##. /usr/local/greenplum-db/greenplum_path.sh
