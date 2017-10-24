@@ -10,6 +10,8 @@
 
 ls /run/*
 
+ls /usr/bin/*
+
 echo < a.out
 
 ##mydb
