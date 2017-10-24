@@ -22,7 +22,7 @@ su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather
 
 ##su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "insert into trial.weather (city,name) values (1,121) " '
 
-su - postgres -c '/usr/lib/postgresql/10/bin/psql -a -f create.sql
+su - postgres -c '/usr/lib/postgresql/10/bin/psql -a -f create.sql'
 
 su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "select * from trial.weather" '
 
