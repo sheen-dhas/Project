@@ -10,7 +10,8 @@
 
 ls /run/*
 
-. /usr/bin/psql -c "\d"
+cd /usr/bin/
+psql -c "\d"
 
 
 ##mydb
