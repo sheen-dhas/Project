@@ -2,7 +2,10 @@
 
 ##ls /*
 
-ls /usr/local/*
+ls /run/*
+ls /etc/*
+ls /var/*
+
 
 ##. /usr/local/greenplum-db/greenplum_path.sh
 ##/usr/local/greenplum-db/bin/gpstart -d "/gpdata/segments/gpseg1"
