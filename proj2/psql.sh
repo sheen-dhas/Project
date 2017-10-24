@@ -10,7 +10,7 @@
 
 ls /run/*
 
-ls /usr/bin/*
+. /usr/bin/psql "select * from pg_database"
 
 
 ##mydb
