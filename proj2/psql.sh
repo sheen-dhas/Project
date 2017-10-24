@@ -6,7 +6,8 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql create table mydb.t(id integer)
+. /run/postgresql CREATE TABLE weather (city varchar(80))
+
 
 ##. /usr/local/greenplum-db/greenplum_path.sh
 ##/usr/local/greenplum-db/bin/gpstart -d "/gpdata/segments/gpseg1"
