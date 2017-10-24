@@ -11,7 +11,13 @@ mkdir postgres
 chmod 777  postgres
 chown postgres postgres
 
-cd /
+cd ..
+
+cd ..
+
+cd ..
+
+cd ..
 
 ls
 
