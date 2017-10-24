@@ -11,7 +11,9 @@ mkdir postgres
 chmod 777  postgres
 chown postgres postgres
 
-cd /usr/lib/postgresql/10/bin/
+cd /
+
+##cd /usr/lib/postgresql/10/bin/
 su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
 
 su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -D /usr/local/postgres -l serverlog'
