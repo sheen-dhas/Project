@@ -13,8 +13,9 @@ mkdir postgres
 chmod 777 postgres
 
 cd /usr/local
-su - postgres -c 'mkdir postgres'
-su - postgres -c 'chmod 777 postgres'
+mkdir postgres
+chmod 777  postgres
+chown postgres postgres
 
 cd /usr/lib/postgresql/10/bin/
 su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
