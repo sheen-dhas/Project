@@ -22,9 +22,11 @@ su - postgres -c '/usr/lib/postgresql/10/bin/initdb -D /usr/local/postgres'
 
 su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -D /usr/local/postgres -l serverlog'
 
-su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE schema trial" '
+##su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE schema trial" '
 
-su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather (city varchar(80))" '
+##su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "CREATE TABLE trial.weather (city varchar(80))" '
+
+su - postgres -c '/usr/lib/postgresql/10/bin/psql -c "insert into trial.weather values ('a')" '
 
 exit;
 ##ls
