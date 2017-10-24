@@ -13,7 +13,7 @@ mkdir postgres
 chmod 777 postgres
 
 cd /usr/lib/postgresql/10/bin/
-su - postgres -c 'pg_ctl start -l serverlog'
+su - postgres -c '/usr/lib/postgresql/10/bin/pg_ctl start -l serverlog'
 ##ls
 
 ##pg_ctl start
