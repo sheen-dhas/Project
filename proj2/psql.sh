@@ -1,5 +1,8 @@
 #!/bin/sh
 
+cd resource-tutorial/proj2
+
+ls
 
 cd /home
 mkdir postgres
