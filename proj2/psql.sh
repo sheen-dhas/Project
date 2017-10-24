@@ -8,6 +8,10 @@
 
 ##. /run/postgresql "select * from weather"
 
+cd /home
+mkdir postgres
+chmod 777 postgres
+
 cd /usr/lib/postgresql/10/bin/
 su - postgres
 ls
