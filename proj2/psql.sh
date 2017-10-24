@@ -6,7 +6,7 @@
 ##ls /etc/*
 ##ls /var/*
 
-. /run/postgresql "insert into weather values('a');commit;" >> a.out
+. /run/postgresql "select * from weather" >> a.out
 
 ls /run/*
 
