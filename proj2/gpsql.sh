@@ -3,6 +3,8 @@
 
 ##apt-get install ssh
 
+apt-get install openssh-server
+
 cd /usr/bin
 
 ls
