@@ -3,7 +3,7 @@
 
 ##apt-get install ssh
 
-./ssh gpadmin@10.63.33.203 
+ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
 psql -c "CREATE schema trial"
