@@ -16,7 +16,7 @@ apk add sshpass
 
 apk add scp
 
-sshpass -p 'gpadmin' scp -o "StrictHostKeyChecking no" create.sql gpadmin@10.63.33.203:/home
+sshpass -p 'gpadmin' scp -o "StrictHostKeyChecking no" create.sql gpadmin@10.63.33.203:/home/gpadmin/ftp
 
 sshpass -p 'gpadmin' ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203 <<!
 psql -c "CREATE schema trial"
