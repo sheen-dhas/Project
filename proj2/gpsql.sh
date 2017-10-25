@@ -3,6 +3,8 @@
 
 ##apt-get install ssh
 
+cd /etc/rc.d/init.d
+
 sshd gpadmin@10.63.33.203 
 <<!
 gpadmin
