@@ -4,6 +4,6 @@ ls /*
 
 cd /usr/bin/
 
-./mongod
+mongod --fork --logpath /var/log/mongodb/mongod.log
 
 mongo --eval "printjson(db.serverStatus())"
