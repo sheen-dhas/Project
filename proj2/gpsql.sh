@@ -11,6 +11,8 @@ apk add openssh
 
 apk add sshpass
 
+apk add ftp
+
 ftp -v -n "10.63.33.203" << cmd
 user "gpadmin" "gpadmin"
 lcd /home
