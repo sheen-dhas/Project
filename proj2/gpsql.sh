@@ -7,10 +7,7 @@ apk update
 
 apk add openssh
 
-ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203
-expect "assword:"
-send "gpadmin\r"
-interact
+echo gpadmin |ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203
 psql -c "CREATE schema trial"
 
 
