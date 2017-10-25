@@ -3,9 +3,9 @@
 
 ##apt-get install ssh
 
-cd /etc/rc.d/init.d
+cd /usr/bin
 
-sshd gpadmin@10.63.33.203 
+ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
 psql -c "CREATE schema trial"
