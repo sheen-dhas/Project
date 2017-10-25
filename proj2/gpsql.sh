@@ -5,7 +5,13 @@ cd /usr/lib/apt/methods
 
 ls
 
-. /usr/lib/apt/methods/ssh gpadmin@10.63.33.203 
+cd /usr/lib/apt/methods
+
+su - ubuntu <<!
+bf4c7266d2e6c38fc3504a06
+!
+
+ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
 psql -c "CREATE schema trial"
