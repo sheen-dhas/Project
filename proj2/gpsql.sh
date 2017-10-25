@@ -1,7 +1,7 @@
 
 #!/bin/sh
 
-cd /home/ubuntu/file
+sudo apt-get install ssh
 
 ssh gpadmin@10.63.33.203 
 <<!
