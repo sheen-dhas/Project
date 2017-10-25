@@ -7,7 +7,7 @@ apk update
 
 apk add openssh
 
-ssh gpadmin@10.63.33.203 yes
+ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203
 <<!
 gpadmin
 psql -c "CREATE schema trial"
