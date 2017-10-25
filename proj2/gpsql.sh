@@ -3,6 +3,8 @@
 
 ##apt-get install ssh
 
+apk add openssh
+
 ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
