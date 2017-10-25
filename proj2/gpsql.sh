@@ -20,7 +20,7 @@ sshpass -p 'gpadmin' scp -o "StrictHostKeyChecking no" create.sql gpadmin@10.63.
 
 
 sshpass -p 'gpadmin' ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203 <<!
-ls
+ls /home/gpadmin/ftp/*
 psql -a -f "/home/gpadmin/ftp/create_gp.sql"
 ##psql -c "CREATE schema trial"
 ##psql -c "CREATE TABLE trial.weather (city int, name varchar(10)) DISTRIBUTED BY (city)"
