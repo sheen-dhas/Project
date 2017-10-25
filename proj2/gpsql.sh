@@ -5,6 +5,8 @@
 
 cd /usr/bin
 
+ls
+
 ./ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
