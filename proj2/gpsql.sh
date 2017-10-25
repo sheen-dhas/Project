@@ -3,8 +3,6 @@
 
 ##apt-get install ssh
 
-cd /usr/bin
-
 ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
