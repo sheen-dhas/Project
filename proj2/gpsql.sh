@@ -3,8 +3,6 @@
 #!/usr/bin/expect -f
 ##apt-get install ssh
 
-$FILENAME
-
 apk update
 
 apk add openssh
@@ -21,4 +19,3 @@ psql -c "CREATE TABLE trial.weather (city int, name varchar(10)) DISTRIBUTED BY 
 psql -c "insert into trial.weather (city,name) values (1,'aaa')"
 psql -c "insert into trial.weather (city,name) values (2,'a1')"
 !
-
