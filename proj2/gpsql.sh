@@ -1,6 +1,8 @@
 
 #!/bin/sh
 
+cd ..
+
 ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
