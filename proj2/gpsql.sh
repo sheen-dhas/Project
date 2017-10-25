@@ -3,12 +3,6 @@
 
 ##apt-get install ssh
 
-apt-get install openssh-server
-
-cd /usr/bin
-
-ls
-
 ./ssh gpadmin@10.63.33.203 
 <<!
 gpadmin
