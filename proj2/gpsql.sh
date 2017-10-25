@@ -7,8 +7,7 @@ apk update
 
 apk add openssh
 
-ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203
-<<!
+ssh -o "StrictHostKeyChecking no" gpadmin@10.63.33.203<<!
 gpadmin
 psql -c "CREATE schema trial"
 ##psql -c "CREATE TABLE trial.weather (city integer, name varchar(10))"
