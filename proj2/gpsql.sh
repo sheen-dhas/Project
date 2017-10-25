@@ -1,7 +1,7 @@
 
 #!/bin/sh
 
-cd ..
+cd /home/ubuntu/file
 
 ssh gpadmin@10.63.33.203 
 <<!
