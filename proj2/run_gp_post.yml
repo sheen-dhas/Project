@@ -15,5 +15,5 @@ run:
         - -exc
         - |
           cd resource-tutorial/proj2
-          chmod 777 gpsql.sh
-          ./gpsql.sh
+          chmod 777 gpsql_d.sh
+          ./gpsql_d.sh
