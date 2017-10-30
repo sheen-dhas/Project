@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd /var/lib/ambari-server/resources/common-services/SPARK2/2.0.0/package/scripts
+cd /var/lib/ambari-server/resources/common-services/HIVE/0.12.0.2.0/package
 
-./spark_client.py
+./hive.py
