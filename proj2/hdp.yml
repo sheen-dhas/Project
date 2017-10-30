@@ -4,7 +4,7 @@ platform: linux
 image_resource:
   type: docker-image
   source: 
-         repository: docker pull hortonworks/ambari-server
+         repository: hortonworks/ambari-server
 
 inputs:
 - name: resource-tutorial
