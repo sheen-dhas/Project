@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ls /*
+cd /var/lib/ambari-server/resources/common-services/SPARK2/2.0.0/package/scripts
 
-sudo service spark-master start
+./spark_client.py
