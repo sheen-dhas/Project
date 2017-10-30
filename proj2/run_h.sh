@@ -2,4 +2,4 @@
 
 ls /*
 
-pyspark
+sudo service spark-master start
