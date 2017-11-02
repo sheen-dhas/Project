@@ -9,4 +9,4 @@ chmod 777 trial.csv
 
 spark-submit run.py
 
-hive
+hbase-shell
