@@ -12,7 +12,7 @@ sc = SparkContext(conf = conf)
  
 sqlContext= SQLContext(sc)
 
-distData = sc.textFile("file:///trial.csv")
+distData = sc.textFile("file:///home/trial.csv")
 data=distData.map(lambda l:l.split(","))
 fm=sqlContext.createDataFrame(data)
 fm.show()
