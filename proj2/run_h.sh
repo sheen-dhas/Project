@@ -2,4 +2,6 @@
 
 ls /*
 
-pyspark
+cd resource-tutorial/proj2
+
+spark-submit run.py
