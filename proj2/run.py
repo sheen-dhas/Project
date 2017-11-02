@@ -2,9 +2,6 @@ import os
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SQLContext,HiveContext
 
-from pyspark.sql.functions import udf
-from pyspark.sql.types import *
-
 import sys
 
 conf = (SparkConf()
