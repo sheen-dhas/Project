@@ -22,7 +22,7 @@ run:
           chmod 777 run_h.sh
           ./run_h.sh
 
----
+
 platform: linux
 
 image_resource:
