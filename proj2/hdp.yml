@@ -11,8 +11,5 @@ inputs:
 - name: resource-tutorial
 
 jobs:
-- name: run-pho
-  plan:
-  - get: resource-tutorial
   - task: run
     file: resource-tutorial/proj2/run_spark.yml
