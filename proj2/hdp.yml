@@ -5,6 +5,7 @@ image_resource:
   type: docker-image
   source: 
          repository: gettyimages/spark
+         repository: nerdammer/hbase-phoenix
 
 inputs:
 - name: resource-tutorial
