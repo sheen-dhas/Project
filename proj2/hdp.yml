@@ -43,5 +43,5 @@ run:
         - -exc
         - |
           cd resource-tutorial/proj2
-          chmod 777 run_h1.sh
-          ./run_h1.sh
+          chmod 777 run2.sh
+          ./run2.sh
