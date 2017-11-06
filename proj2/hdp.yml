@@ -1,8 +1,7 @@
 ---
 platform: linux
 
-- name: task
-  plan:
+plan:
   - aggregate:
     - get: 
         repository: gettyimages/spark
