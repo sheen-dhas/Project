@@ -1,5 +1,4 @@
 resources:
 - name: build-spark
-  type: docker-image
   source:
     repository: gettyimages/spark
