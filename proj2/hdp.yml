@@ -3,10 +3,9 @@ platform: linux
 
 plan:
   - aggregate:
-    - get: 
-        repository: gettyimages/spark
-    - get:
-         repository: nerdammer/hbase-phoenix
+    - get: gettyimages/spark
+    - get:nerdammer/hbase-phoenix
+    
 inputs:
 - name: resource-tutorial
 
