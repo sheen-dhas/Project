@@ -1,6 +1,6 @@
 ---
 platform: linux
-		  
+	  
 - name: task
   plan:
   - aggregate:
