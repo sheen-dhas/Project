@@ -1,7 +1,7 @@
 ---
 platform: linux
 inputs:
-- name: resource-tutorial
+- name: build-hbase
 - name: build-spark
 - name: resource-tutorial
 
