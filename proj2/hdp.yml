@@ -1,4 +1,7 @@
-resources:
+---
+platform: linux
+
+image_resources:
 - name: build-spark
   source:
     repository: gettyimages/spark
