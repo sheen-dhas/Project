@@ -3,10 +3,3 @@ resources:
   type: docker-image
   source:
     repository: gettyimages/spark
-
-jobs:
-- name: build
-  plan:
-  - get: build-spark
-  - get: build-hbase
-  - task: build
