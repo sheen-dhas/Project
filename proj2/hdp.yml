@@ -1,7 +1,7 @@
 ---
 platform: linux
 
-image_resources:
+resources:
 - name: build-spark
   type: docker-image
   source:
