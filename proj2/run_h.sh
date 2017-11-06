@@ -1,9 +1,5 @@
 #!/bin/sh
 
-ls
-
-ls /*
-
 cp trial.csv /home
 chmod 777 trial.csv
 
