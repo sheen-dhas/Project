@@ -15,8 +15,3 @@ jobs:
   - get: build-spark
   - get: build-hbase
   - task: build
-    config:
-      inputs:
-      - name: build-spark
-      - name: build-hbase
-      - name: resource-tutorial
