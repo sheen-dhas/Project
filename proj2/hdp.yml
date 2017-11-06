@@ -1,16 +1,18 @@
 ---
 platform: linux
+		  
+- name: task
+  plan:
+  - aggregate:
+    - get: 
+	    repository: gettyimages/spark
 
-image_resource:
-  type: docker-image
-  source: 
-         repository: gettyimages/spark
-         
 
+    - get:
+	    repository: nerdammer/hbase-phoenix
 inputs:
 - name: resource-tutorial
-
-
+		
 run:
   path: sh
   args:
