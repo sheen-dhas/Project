@@ -3,12 +3,20 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: 
-         repository: nerdammer/hbase-phoenix
-         
+- name: build-spark
+  type: docker-image
+  source:
+    repository: gettyimages/spark
+- name: build-hbase
+  type: docker-image
+  source:
+    repository: nerdammer/hbase-phoenix
+
 
 inputs:
 - name: resource-tutorial
+- name: build-spark
+- name: build-hbase
 
 run:
   path: sh
