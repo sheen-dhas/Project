@@ -1,11 +1,13 @@
 ---
 platform: linux
 
-resources:
+image_resource:
 - name: build-spark
   type: docker-image
   source:
     repository: gettyimages/spark
+
+image_resource:
 - name: build-hbase
   type: docker-image
   source:
