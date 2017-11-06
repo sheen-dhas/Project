@@ -3,7 +3,6 @@ resources:
   type: docker-image
   source:
     repository: gettyimages/spark
-        
 - name: build-hbase
   type: docker-image
   source:
@@ -20,7 +19,6 @@ jobs:
       inputs:
       - name: build-spark
       - name: build-hbase
-      - name: resource-tutorial
       run:
         path: sh
         args:
