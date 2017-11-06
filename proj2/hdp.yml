@@ -19,11 +19,4 @@ jobs:
       inputs:
       - name: build-spark
       - name: build-hbase
-      run:
-        path: sh
-        args:
-            - -exc
-            - |
-              cd resource-tutorial/proj2
-              chmod 777 run_h.sh
-              ./run_h.sh
+      - name: resource-tutorial
