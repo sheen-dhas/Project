@@ -17,21 +17,19 @@ jobs:
 - name: build
   plan:
   - get: build-spark
-    trigger: false
   - get: build-hbase
-  - task: build-iph-ui
+  - task: build
     config:
       platform: linux
       inputs:
       - name: build-spark
       - name: build-hbase
       - name: resource-tutorial
-            
-run:
- path: sh
- args:
-      - -exc
-      - |
-        cd resource-tutorial/proj2
-        chmod 777 run_h.sh
-        ./run_h.sh
+      run:
+        path: sh
+        args:
+            - -exc
+            - |
+              cd resource-tutorial/proj2
+              chmod 777 run_h.sh
+              ./run_h.sh
