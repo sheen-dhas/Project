@@ -3,11 +3,6 @@ resources:
   type: docker-image
   source:
     repository: gettyimages/spark
-- name: build-hbase
-  type: docker-image
-  source:
-    repository: nerdammer/hbase-phoenix
-    
 
 jobs:
 - name: build
