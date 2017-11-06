@@ -1,6 +1,7 @@
 ---
 platform: linux
 
+- task
 - name: build-spark
    image_resource:
      type: docker-image
