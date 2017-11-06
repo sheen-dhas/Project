@@ -1,9 +1,14 @@
 ---
 platform: linux
 
-plan:
-    - get: gettyimages/spark
-    - get: nerdammer/hbase-phoenix
+image_resource:
+  type: docker-image
+  - get:
+    source: 
+         repository: gettyimages/spark
+  - get:
+    source: 
+         repository: nerdammer/hbase-phoenix
     
 inputs:
 - name: resource-tutorial
