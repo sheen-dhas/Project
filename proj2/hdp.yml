@@ -5,7 +5,6 @@ plan:
   - aggregate:
     - get: 
         repository: gettyimages/spark
-
     - get:
          repository: nerdammer/hbase-phoenix
 inputs:
