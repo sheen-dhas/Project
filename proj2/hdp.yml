@@ -2,11 +2,13 @@
 platform: linux
 
 image_resource:
-  type: docker-image
+ - aggregate:
   - get:
+    type: docker-image
     source: 
          repository: gettyimages/spark
   - get:
+    type: docker-image
     source: 
          repository: nerdammer/hbase-phoenix
     
