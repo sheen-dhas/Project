@@ -10,7 +10,7 @@ plan:
          repository: nerdammer/hbase-phoenix
 inputs:
 - name: resource-tutorial
-		
+
 run:
   path: sh
   args:
