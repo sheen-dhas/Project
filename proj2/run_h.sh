@@ -3,7 +3,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-cd home
+cd /home
 cd ..
 
 cd build-spark
