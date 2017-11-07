@@ -3,6 +3,9 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+cd build-spark
+ls /*
+
 spark-submit run.py
 
 hbase shell
