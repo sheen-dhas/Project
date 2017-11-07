@@ -29,6 +29,8 @@ export PATH=$PATH:/home/build-spark/rootfs/usr/jdk1.8.0_131/bin
 
 ##ls /home/build-spark/rootfs/usr/spark-2.2.0/*
 
+hadoop version
+
 cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
 
 ./pyspark
