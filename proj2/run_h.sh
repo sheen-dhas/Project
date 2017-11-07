@@ -9,6 +9,8 @@ chmod 777 trial.csv
 
 ##ls /home/build-spark/*
 
+ls /home/build-spark/rootfs/usr/java/jdk1.8.0_131/*
+
 export JAVA_HOME=/home/build-spark/rootfs/usr/java/jdk1.8.0_131
 export PATH=$PATH:/home/build-spark/rootfs/usr/java/jdk1.8.0_131/bin
 
