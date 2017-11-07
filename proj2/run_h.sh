@@ -3,13 +3,13 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-ls /*
+##ls /*
 
 cd /home/build-spark
 
-ls /*
+ls /home/build-spark/*
 
-spark-submit run.py
+##3spark-submit run.py
 
 ##hbase shell
 
