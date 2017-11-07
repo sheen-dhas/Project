@@ -9,7 +9,7 @@ chmod 777 trial.csv
 
 ##ls /home/build-spark/*
 
-##ls /home/build-spark/rootfs/*
+ls /home/build-spark/rootfs/*
 
 ##ls /home/build-spark/rootfs/usr/spark-2.2.0/*
 
