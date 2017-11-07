@@ -1,8 +1,8 @@
 #!/bin/sh
 
-cp spark-env.sh /home/build-spark/rootfs/usr/spark-2.2.0/conf
+##cp spark-env.sh /home/build-spark/rootfs/usr/spark-2.2.0/conf
 
-chmod 777 spark-env.sh
+##chmod 777 spark-env.sh
 
 cp trial.csv /home
 chmod 777 trial.csv
