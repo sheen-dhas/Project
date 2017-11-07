@@ -6,7 +6,7 @@ chmod 777 trial.csv
 cd /home
 cd ..
 
-cd build-spark
+cd /build-spark
 ls /*
 
 spark-submit run.py
