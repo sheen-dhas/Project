@@ -13,6 +13,8 @@ ls /home/build-spark/rootfs/*
 
 ls /home/build-spark/rootfs/usr/spark-2.2.0/*
 
+cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
+
 ./spark-submit run.py
 
 
