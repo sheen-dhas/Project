@@ -9,6 +9,13 @@ cd /home/build-spark
 
 ls /home/build-spark/*
 
+ls /home/build-spark/rootfs/*
+
+cd /home/build-spark/rootfs/bin
+
+ls/*
+
+
 ##3spark-submit run.py
 
 ##hbase shell
