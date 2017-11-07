@@ -9,7 +9,10 @@ chmod 777 trial.csv
 
 ##ls /home/build-spark/*
 
-ls /home/build-spark/rootfs/opt/*
+ls /home/build-spark/rootfs/usr/hadoop-2.7.3/*
+
+set HADOOP_HOME=/home/build-spark/rootfs/usr/hadoop-2.7.3
+set PATH=/home/build-spark/rootfs/usr/hadoop-2.7.3/bin
 
 ##ls /home/build-spark/rootfs/usr/jdk1.8.0_131/*
 ##ls /home/build-spark/rootfs/usr/java/*
