@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-apt-get install ssh
+apt-get install openssh-server
 
 ssh gpadmin@10.63.33.203
 
