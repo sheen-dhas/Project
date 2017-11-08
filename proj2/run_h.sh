@@ -43,9 +43,7 @@ cd /home
 
 ls
 
-cd "$(spark-submit "$(realpath "$0")")"
-
-cd spark-submit
+cs spark-submit run.py
 
 ###/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
 
