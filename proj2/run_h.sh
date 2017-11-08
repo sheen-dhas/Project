@@ -41,6 +41,8 @@ ls -ld /home/build-spark
 
 cd /home
 
+ls
+
 . /build-spark run.py
 
 ###/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
