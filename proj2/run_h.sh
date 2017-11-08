@@ -6,8 +6,6 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-wget http://www.interior-dsgn.com/apache/hbase/stable/hbase-0.98.8-hadoop2-bin.tar.gz
-
 ##ls /*
 
 ##cd /home/build-spark
@@ -49,5 +47,7 @@ spark-submit run.py
 ##cd /opt/phoenix-4.4.0-HBase-1.1-bin/bin
 
 ##./sqlline.py localhost:/hbase-unsecure
+
+cd /home/build-hbase
 
 ls /*
