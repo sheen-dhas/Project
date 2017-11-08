@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-apt-get update
+apt-get -o "StrictHostKeyChecking no" update
 
 apt-get install openssh-server
 
