@@ -19,6 +19,7 @@ run:
           ls
           ##cp -r build-spark /home
           ln -s build-spark /home
+          chmod 777 build-spark
           cd resource-tutorial/proj2
           chmod 777 run_h.sh
           ./run_h.sh
