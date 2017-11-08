@@ -19,7 +19,7 @@ run:
           ls
           ##cp -r build-spark /home
           ##spark-submit 
-          cd build-spark/rootfs
+          cd build-spark/rootfs/usr/spark-2.2.0
           ls
           cd build-spark/rootfs/usr/spark-2.2.0/bin
           ./spark-submit run.py
