@@ -35,7 +35,7 @@ chmod 777 trial.csv
 
 pyspark
 
-##./spark-submit run.py
+./spark-submit run.py
 
 
 ##3spark-submit run.py
