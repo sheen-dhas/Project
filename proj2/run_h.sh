@@ -6,6 +6,8 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+ssh gpadmin@10.63.33.203
+
 ##ls /*
 
 ##cd /home/build-spark
