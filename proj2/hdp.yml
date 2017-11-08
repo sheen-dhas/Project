@@ -18,10 +18,7 @@ run:
         - |
           ls
           ##cp -r build-spark /home
-          cd home
-          mkdir sprk
-          chmod 777 sprk
-          ln -s build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit /home/sprk
+          ln -s build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit home
           chmod 777 spark-submit
           cd resource-tutorial/proj2
           chmod 777 run_h.sh
