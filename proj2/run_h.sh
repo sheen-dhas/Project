@@ -6,6 +6,8 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+
+
 ##ls /*
 
 ##cd /home/build-spark
@@ -34,6 +36,8 @@ chmod 777 trial.csv
 ###cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
 
 ###pyspark
+
+ls -ld /home/build-spark
 
 ls /home/*
 
