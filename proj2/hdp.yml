@@ -19,7 +19,9 @@ run:
           ls
           ##cp -r build-spark /home
           ##spark-submit 
-          cd /build-spark/rootfs/usr/spark-2.2.0/bin/
+          cd build-spark
+          ls
+          cd /rootfs/usr/spark-2.2.0/bin/
           ./spark-submit run.py
           hbase shell
           ##ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
