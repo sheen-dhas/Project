@@ -43,7 +43,7 @@ cd /home
 
 ls
 
-export PATH=$PATH:spark-submit
+cd "$(spark-submit "$(realpath "$0")")"
 
 spark-submit run.py
 
