@@ -41,6 +41,8 @@ ls -ld /home/build-spark/
 
 cd -P /home/build-spark
 
+cd -P build-spark
+
 ./spark-submit run.py
 
 
