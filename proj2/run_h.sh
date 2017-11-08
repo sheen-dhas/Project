@@ -43,7 +43,9 @@ cd /home
 
 ls
 
-./spark-submit run.py
+export PATH=$PATH:spark-submit
+
+spark-submit run.py
 
 ###/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
 
