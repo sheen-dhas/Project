@@ -18,8 +18,8 @@ run:
         - |
           ls
           ##cp -r build-spark /home
-          spark-submit run.py
-          cp build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit /home
+          ##spark-submit 
+          . /build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
           ##ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
           ##chmod 777 spark-submit
           cd resource-tutorial/proj2
