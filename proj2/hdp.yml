@@ -24,5 +24,5 @@ run:
           ##chmod 777 spark-submit
           cd resource-tutorial/proj2
           chmod 777 run_h.sh
-          ./run_h.sh
           hbase shell
+          ./run_h.sh
