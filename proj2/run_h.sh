@@ -44,7 +44,7 @@ spark-submit run.py
 
 ##3spark-submit run.py
 
-hbase shell
+###hbase shell
 
 ##cd /opt/phoenix-4.4.0-HBase-1.1-bin/bin
 
