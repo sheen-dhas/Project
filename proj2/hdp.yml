@@ -9,6 +9,7 @@ image_resource:
 inputs:
 - name: resource-tutorial
 - name: build-spark
+- name: build-hbase
 
 
 run:
@@ -17,7 +18,7 @@ run:
         - -exc
         - |
           ls
-          cp -r build-spark /home
+          ##cp -r build-spark /home
           cd resource-tutorial/proj2
           chmod 777 run_h.sh
           ./run_h.sh
