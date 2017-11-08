@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-
+wget http://www.interior-dsgn.com/apache/hbase/stable/hbase-0.98.8-hadoop2-bin.tar.gz
 
 ##ls /*
 
@@ -50,4 +50,4 @@ spark-submit run.py
 
 ##./sqlline.py localhost:/hbase-unsecure
 
-##ls /*
+ls /*
