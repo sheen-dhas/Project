@@ -19,10 +19,10 @@ run:
           ls
           ##cp -r build-spark /home
           ##spark-submit 
+          hbase shell
           ./build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
           ##ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
           ##chmod 777 spark-submit
           cd resource-tutorial/proj2
           chmod 777 run_h.sh
-          hbase shell
           ./run_h.sh
