@@ -37,11 +37,7 @@ chmod 777 trial.csv
 
 ###pyspark
 
-cd /home
-
-ls
-
-./spark-submit run.py
+spark-submit run.py
 
 ###/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
 
