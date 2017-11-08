@@ -12,35 +12,35 @@ chmod 777 trial.csv
 
 ##ls /home/build-spark/*
 
-ls /home/build-spark/rootfs/usr/hadoop-2.7.3/*
+###ls /home/build-spark/rootfs/usr/hadoop-2.7.3/*
 
-export HADOOP_HOME=/home/build-spark/rootfs/usr/hadoop-2.7.3
-export PATH=$PATH:/home/build-spark/rootfs/usr/hadoop-2.7.3/bin
-export SPARK_DIST_CLASSPATH=/home/build-spark/rootfs/usr/hadoop-2.7.3/bin/hadoop
+###export HADOOP_HOME=/home/build-spark/rootfs/usr/hadoop-2.7.3
+###export PATH=$PATH:/home/build-spark/rootfs/usr/hadoop-2.7.3/bin
+###export SPARK_DIST_CLASSPATH=/home/build-spark/rootfs/usr/hadoop-2.7.3/bin/hadoop
 
 
 ##ls /home/build-spark/rootfs/usr/jdk1.8.0_131/*
 ##ls /home/build-spark/rootfs/usr/java/*
 
-export JAVA_HOME=/home/build-spark/rootfs/usr/jdk1.8.0_131
-export PATH=$PATH:/home/build-spark/rootfs/usr/jdk1.8.0_131/bin
+###export JAVA_HOME=/home/build-spark/rootfs/usr/jdk1.8.0_131
+###export PATH=$PATH:/home/build-spark/rootfs/usr/jdk1.8.0_131/bin
 
 ##ls /home/build-spark/rootfs/*
 
 ##ls /home/build-spark/rootfs/usr/spark-2.2.0/*
 
-hadoop version
+###hadoop version
 
-cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
+###cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
 
-./pyspark
+pyspark
 
 ##./spark-submit run.py
 
 
 ##3spark-submit run.py
 
-##hbase shell
+hbase shell
 
 ##cd /opt/phoenix-4.4.0-HBase-1.1-bin/bin
 
