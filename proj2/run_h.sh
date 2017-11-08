@@ -37,9 +37,9 @@ chmod 777 trial.csv
 
 ###pyspark
 
-ls -ld /home/build-spark/*
+ls -ld /home/build-spark/
 
-cd -l /home/build-spark
+cd -L /home/build-spark
 
 ./spark-submit run.py
 
