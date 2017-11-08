@@ -41,7 +41,7 @@ ls -ld /home/build-spark/
 
 cd /home
 
-. /build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
+. /build-spark/build-spark/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
 
 
 ##3spark-submit run.py
