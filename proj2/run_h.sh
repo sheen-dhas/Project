@@ -6,9 +6,9 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-apt-get -o "StrictHostKeyChecking no" update
+apt-get -y update
 
-apt-get install openssh-server
+apt-get install -y openssh-server
 
 ssh gpadmin@10.63.33.203
 
