@@ -21,6 +21,7 @@ run:
           alias cs='cd build-spark/rootfs/usr/spark-2.2.0/bin'
           cs
           ls
+          cp spark-submit /home
           ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
           ##chmod 777 spark-submit
           cd resource-tutorial/proj2
