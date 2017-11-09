@@ -25,7 +25,7 @@ apt-get install -y openssh-server
 
 ##hbase shell
 
-echo"create 'employee','details1','details2'" > ./sample_commands.txt
+echo "create 'employee','details1','details2'" > ./sample_commands.txt
 hbase shell ./sample_commands.txt
 
 echo "list" | hbase shell
