@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-export HBASE_MANAGES_ZK=true
+cp hbase-env.sh /opt/hbase/conf
 
 apt-get -y update
 
