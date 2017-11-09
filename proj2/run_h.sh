@@ -71,6 +71,6 @@ spark-submit run.py
 
 ##./sqlline.py localhost:/hbase-unsecure
 
-cd /home/build-hbase
+# cd /home/build-hbase
 
-ls /*
+# ls /*
