@@ -6,5 +6,4 @@ put 'test', 'row3', 'cf:c', 'value3'
 put 'test', 'row4', 'cf:d', 'value4'
 scan 'test'
 get 'test', 'row1'
-disable 'test'
-enable 'test'
+list
