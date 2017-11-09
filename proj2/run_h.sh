@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-ls
+ls /*
 
 yes | cp hbase-env.sh /opt/hbase/conf
 
