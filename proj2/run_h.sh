@@ -14,7 +14,7 @@ apt-get install -y openssh-server
 
 /opt/hbase/bin/start-hbase.sh
 
-echo -e "list" | hbase shell >>tableListSummary.txt
+echo -e "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
 
