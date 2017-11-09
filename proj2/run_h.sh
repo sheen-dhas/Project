@@ -14,6 +14,8 @@ chmod 777 trial.csv
 
 # /opt/hbase/bin/start-hbase.sh
 
+/opt/hbase/bin/zookeeper start
+
 hbase shell
 echo -e "list" | hbase shell
 
