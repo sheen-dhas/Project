@@ -6,19 +6,15 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-chmod 777 /opt/hbase/conf/hbase-env.sh
+. /opt/replace-hostname
 
-ls /opt/hbase/conf/*
+apt-get -y update
 
-sudo cp hbase-env.sh /opt/hbase/conf
+apt-get install -y openssh-server
 
-####apt-get -y update
+/opt/hbase/bin/hbase-daemons.sh start zookeeper
 
-####apt-get install -y openssh-server
-
-# /opt/hbase/bin/hbase-daemons.sh start zookeeper
-
-####/opt/hbase/bin/start-hbase.sh
+. /opt/hbase/bin/start-hbase.sh
 
 # /opt/hbase/bin/zookeepers.sh start
 
