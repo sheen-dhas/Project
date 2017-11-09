@@ -8,13 +8,15 @@ chmod 777 trial.csv
 
 ##. /opt/hbase-server > a.out
 
-##apt-get -y update
+apt-get -y update
 
-##apt-get install -y openssh-server
+apt-get install -y openssh-server
 
 /opt/hbase/bin/start-hbase.sh
 
 /opt/hbase/bin/hbase-daemons.sh start zookeeper
+
+/opt/hbase-server
 
 # /opt/hbase/bin/zookeepers.sh start
 
