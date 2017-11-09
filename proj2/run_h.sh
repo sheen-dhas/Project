@@ -24,6 +24,7 @@ apt-get install -y openssh-server
 # /opt/hbase/bin/zookeepers.sh start
 
 ##hbase shell
+"create 'employee','details1','details2'" | hbase shell
 echo "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
