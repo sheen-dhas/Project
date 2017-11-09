@@ -14,9 +14,9 @@ apt-get install -y openssh-server
 
 # /opt/hbase/bin/hbase-daemons.sh start zookeeper
 
-# /opt/hbase/bin/start-hbase.sh
+/opt/hbase/bin/start-hbase.sh
 
-/opt/hbase/bin/zookeepers.sh start
+# /opt/hbase/bin/zookeepers.sh start
 
 hbase shell
 echo -e "list" | hbase shell
