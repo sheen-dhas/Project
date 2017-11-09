@@ -6,6 +6,8 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+ls
+
 yes | cp hbase-env.sh /opt/hbase/conf
 
 apt-get -y update
