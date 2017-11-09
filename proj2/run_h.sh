@@ -6,6 +6,8 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+export HBASE_MANAGES_ZK=true
+
 apt-get -y update
 
 apt-get install -y openssh-server
