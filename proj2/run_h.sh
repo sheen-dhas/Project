@@ -6,15 +6,15 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-nohup /opt/hbase-server > a.out
+##. /opt/hbase-server > a.out
 
 apt-get -y update
 
 apt-get install -y openssh-server
 
-/opt/hbase/bin/hbase-daemons.sh start zookeeper
-
 . /opt/hbase/bin/start-hbase.sh
+
+/opt/hbase/bin/hbase-daemons.sh start zookeeper
 
 # /opt/hbase/bin/zookeepers.sh start
 
