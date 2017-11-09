@@ -12,9 +12,12 @@ apt-get -y update
 
 apt-get install -y openssh-server
 
-##/opt/hbase/bin/hbase-daemons.sh start zookeeper
+##/opt/hbase/bin/start-hbase.sh
+
+/opt/hbase/bin/hbase-daemons.sh start zookeeper
 
 /opt/hbase-server
+
 
 ##/opt/hbase/bin/start-hbase.sh
 
