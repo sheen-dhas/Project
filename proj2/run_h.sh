@@ -6,9 +6,9 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-# apt-get -y update
+apt-get -y update
 
-# apt-get install -y openssh-server
+apt-get install -y openssh-server
 
 # /opt/hbase/bin/hbase-daemons.sh start zookeeper
 
