@@ -20,7 +20,7 @@ apt-get install -y openssh-server
 
 # /opt/hbase/bin/zookeepers.sh start
 
-hbase shell
+##hbase shell
 echo -e "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
