@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-. /opt/replace-hostname
+. /opt/hbase-server
 
 apt-get -y update
 
