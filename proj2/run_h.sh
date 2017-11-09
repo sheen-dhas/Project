@@ -6,7 +6,7 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-. /opt/hbase-server
+nohup /opt/hbase-server > a.out
 
 apt-get -y update
 
