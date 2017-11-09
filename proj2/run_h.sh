@@ -27,7 +27,7 @@ apt-get install -y openssh-server
 
 hbase shell ./sample_commands.txt
 
-echo "list" | hbase shell
+##echo "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
 
