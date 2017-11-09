@@ -6,14 +6,15 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-apt-get -y update
+# apt-get -y update
 
-apt-get install -y openssh-server
+# apt-get install -y openssh-server
 
-/opt/hbase/bin/hbase-daemons.sh start zookeeper
+# /opt/hbase/bin/hbase-daemons.sh start zookeeper
 
-/opt/hbase/bin/start-hbase.sh
+# /opt/hbase/bin/start-hbase.sh
 
+hbase shell
 echo -e "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
