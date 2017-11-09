@@ -7,3 +7,4 @@ put 'test', 'row4', 'cf:d', 'value4'
 scan 'test'
 get 'test', 'row1'
 list
+exit
