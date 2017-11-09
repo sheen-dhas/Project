@@ -10,6 +10,8 @@ chmod 777 /opt/hbase/conf/hbase-env.sh
 
 ls /opt/hbase/conf/*
 
+rm /opt/hbase/conf/hbase-env.sh
+
 cp hbase-env.sh /opt/hbase/conf
 
 ####apt-get -y update
