@@ -1,5 +1,8 @@
 create 'employee', 'ericcson'
 put 'employee', 'rowkey', 'ericcson:id', '1'
+put 'employee', 'rowkey1', 'ericcson:id', '2'
+put 'employee', 'rowkey2', 'ericcson:id', '3'
+put 'employee', 'rowkey3', 'ericcson:id', '4'
 scan 'employee'
 list
 exit
