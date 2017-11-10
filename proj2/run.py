@@ -29,4 +29,4 @@ aa=sqlContext.sql("select * from tim_ericcson_bulk")
 
 aa.show()
 
-aa.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+df.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
