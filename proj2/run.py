@@ -2,10 +2,6 @@ import os
 from pyspark import SparkConf,SparkContext
 from pyspark.sql import SQLContext,HiveContext
 
-from pyspark.sql.functions import udf
-from pyspark.sql.types import *
-
-
 import json
 
 import sys
@@ -17,7 +13,7 @@ conf = (SparkConf()
 
 sc = SparkContext(conf = conf)
 
-sqlContext= HiveContext(sc)
+sqlContext= SQLContext(sc)
 
 cat_main = json.dumps({"table":{"namespace":"default", "name":"employee", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
 "id":{"cf":"ericcson","col":"id","type":"string"}}})
