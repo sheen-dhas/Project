@@ -2,4 +2,5 @@ create 'employee', 'ericcson'
 put 'employee', 'rowkey', 'ericcson:id', '1'
 scan 'employee'
 list
+create 'employee1', 'ericcson'
 exit
