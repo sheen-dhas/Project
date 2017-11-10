@@ -60,7 +60,7 @@ hbase shell ./sample_commands.txt
 
 ###pyspark
 
-spark-submit  --num-executors 5 --driver-memory 2g --executor-memory 2g --packages com.hortonworks:shc:1.0.0-1.6-s_2.10 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
+spark-submit  --num-executors 5 --driver-memory 2g --executor-memory 2g --packages com.hortonworks:shc:1.1.2-2.2-s_2.10 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
 ##spark-submit 
 
