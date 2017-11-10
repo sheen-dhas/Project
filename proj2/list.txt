@@ -1,0 +1,2 @@
+scan 'employee1'
+exit
