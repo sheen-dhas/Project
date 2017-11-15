@@ -1,2 +1,5 @@
 list
+
+scan 'tim_ericcson_bulk'
+
 exit
