@@ -17,7 +17,7 @@ conf = (SparkConf()
 
 sc = SparkContext(conf = conf)
 
-sqlContext= HiveContext(sc)
+sqlContext= SQLContext(sc)
 
 cat_main = json.dumps({"table":{"namespace":"default", "name":"tim_ericcson_bulk", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
 "client":{"cf":"ericcson","col":"client","type":"string"},\
