@@ -1,5 +1,5 @@
 list
 
-scan 'tim_ericcson_bulk'
+scan 'tbl_users_affected_cnt'
 
 exit
