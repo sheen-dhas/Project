@@ -1,3 +1,2 @@
-scan 'employee1'
 list
 exit
