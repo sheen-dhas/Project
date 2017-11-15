@@ -275,12 +275,12 @@ df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org
 
 df.registerTempTable("tim_ericcson_bulk")
 
-df1=sqlContext.sql("SELECT accesspointnameni,causeforrecclosing,duration,\
+df1=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,\
 CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,servedimei,servedimsi from tim_ericcson_bulk where causeforrecclosing='4'")
 
 df1.registerTempTable("tim_ericcson_bulk1")
 
-df1=sqlContext.sql("SELECT max(accesspointnameni) accesspointnameni,max(causeforrecclosing) causeforrecclosing,max(duration) duration,\
+df1=sqlContext.sql("SELECT max(rowkey) rowkey,max(accesspointnameni) accesspointnameni,max(causeforrecclosing) causeforrecclosing,max(duration) duration,\
 recordopeningtime,servedimsi,'Abnormal Termination' cdr_reason ,count(servedimsi) terminated_count \
 from tim_ericcson_bulk1 \
 where causeforrecclosing='4'\
@@ -288,7 +288,7 @@ group by servedimsi,recordopeningtime")
 
 df1.registerTempTable("tim_ericcson_bulk2")
 
-df2=sqlContext.sql("SELECT accesspointnameni,causeforrecclosing,duration,recordopeningtime,servedimsi,cdr_reason,terminated_count from tim_ericcson_bulk2")
+df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,recordopeningtime,servedimsi,cdr_reason,terminated_count from tim_ericcson_bulk2")
 
 ##trial1="TBL_USERS_AFFECTED_CNT"
 
