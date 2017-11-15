@@ -267,9 +267,14 @@ cat_main = json.dumps({"table":{"namespace":"default", "name":"tim_ericcson_bulk
 "tac":{"cf":"ericcson","col":"tac","type":"string"}}})
 
 cat = json.dumps({"table":{"namespace":"default", "name":"tbl_users_affected_cnt", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
-"accesspointnameni":{"cf":"ericcson","col":"accesspointnameni","type":"string"},"recordopeningtime":{"cf":"ericcson","col":"recordopeningtime","type":"string"},\
-"servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},"cdr_reason":{"cf":"ericcson","col":"cdr_reason","type":"string"},\
+"accesspointnameni":{"cf":"ericcson","col":"accesspointnameni","type":"string"},\
+"causeforrecclosing":{"cf":"ericcson","col":"causeforrecclosing","type":"string"},\
+"cdr_reason":{"cf":"ericcson","col":"cdr_reason","type":"string"},\
+"duration":{"cf":"ericcson","col":"duration","type":"string"},\
+"recordopeningtime":{"cf":"ericcson","col":"recordopeningtime","type":"string"},\
+"servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},\
 "terminated_count":{"cf":"ericcson","col":"terminated_count","type":"string"}}})
+
 
 df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org.apache.spark.sql.execution.datasources.hbase").load()
 
