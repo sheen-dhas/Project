@@ -293,7 +293,7 @@ group by servedimsi,recordopeningtime")
 
 df1.registerTempTable("tim_ericcson_bulk2")
 
-df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,recordopeningtime,servedimsi,cdr_reason,concat(' ',terminated_count) from tim_ericcson_bulk2")
+df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,recordopeningtime,servedimsi,cdr_reason,CAST(terminated_count AS STRING) terminated_count from tim_ericcson_bulk2")
 
 ##trial1="TBL_USERS_AFFECTED_CNT"
 
