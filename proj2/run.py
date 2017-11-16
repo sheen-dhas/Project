@@ -324,6 +324,12 @@ df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_
 
 ##trial1="TBL_USERS_CROSSED_VOLLIMIT"
 
+try:
+   df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+except Exception as e:
+   aa=2
 
-df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+try:    
 df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+except Exception as e:
+   aa=2
