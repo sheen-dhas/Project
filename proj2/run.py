@@ -275,6 +275,15 @@ cat = json.dumps({"table":{"namespace":"default", "name":"tbl_users_affected_cnt
 "servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},\
 "terminated_count":{"cf":"ericcson","col":"terminated_count","type":"string"}}})
 
+cat_val = json.dumps({"table":{"namespace":"default", "name":"tbl_users_crossed_vollimit", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
+"accesspointnameni":{"cf":"ericcson","col":"accesspointnameni","type":"string"},\
+"causeforrecclosing":{"cf":"ericcson","col":"causeforrecclosing","type":"string"},\
+"cdr_reason":{"cf":"ericcson","col":"cdr_reason","type":"string"},\
+"duration":{"cf":"ericcson","col":"duration","type":"string"},\
+"recordopeningtime":{"cf":"ericcson","col":"recordopeningtime","type":"string"},\
+"servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},\
+"limit_crossed_cnt":{"cf":"ericcson","col":"terminated_count","type":"string"}}})
+
 
 df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org.apache.spark.sql.execution.datasources.hbase").load()
 
@@ -298,3 +307,25 @@ df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,
 ##trial1="TBL_USERS_AFFECTED_CNT"
 
 df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+
+
+df11=sqlContext.sql("SELECT causeforrecclosing,\
+CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,\
+'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='16'")
+
+df11.registerTempTable("tim_ericcson_bulk11")
+
+df12=sqlContext.sql("SELECT max(causeforrecclosing) causeforrecclosing,\
+recordopeningtime,servedimsi,'Crossed volume Limit' cdr_reason ,count(servedimsi) limit_crossed_cnt \
+from tim_ericcson_bulk11 \
+where causeforrecclosing='16'\
+group by servedimsi,recordopeningtime")
+
+df12.registerTempTable("tim_ericcson_bulk22")
+
+df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_reason,CAST(limit_crossed_cnt AS STRING) limit_crossed_cnt from tim_ericcson_bulk22")
+
+##trial1="TBL_USERS_CROSSED_VOLLIMIT"
+
+
+df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
