@@ -306,9 +306,6 @@ df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,
 
 ##trial1="TBL_USERS_AFFECTED_CNT"
 
-df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
-
-
 df11=sqlContext.sql("SELECT causeforrecclosing,\
 CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,\
 'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='16'")
@@ -328,4 +325,5 @@ df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_
 ##trial1="TBL_USERS_CROSSED_VOLLIMIT"
 
 
+df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
 df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
