@@ -266,23 +266,23 @@ cat_main = json.dumps({"table":{"namespace":"default", "name":"tim_ericcson_bulk
 "volumeuplink":{"cf":"ericcson","col":"volumeuplink","type":"string"},\
 "tac":{"cf":"ericcson","col":"tac","type":"string"}}})
 
-cat = json.dumps({"table":{"namespace":"default", "name":"tbl_users_affected_cnt", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
-"accesspointnameni":{"cf":"ericcson","col":"accesspointnameni","type":"string"},\
-"causeforrecclosing":{"cf":"ericcson","col":"causeforrecclosing","type":"string"},\
-"cdr_reason":{"cf":"ericcson","col":"cdr_reason","type":"string"},\
-"duration":{"cf":"ericcson","col":"duration","type":"string"},\
-"recordopeningtime":{"cf":"ericcson","col":"recordopeningtime","type":"string"},\
-"servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},\
-"terminated_count":{"cf":"ericcson","col":"terminated_count","type":"string"}}})
+cat = json.dumps({"table":{"namespace":"default", "name":"tbl_users_affected_cnt_hb", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
+"accesspointnameni":{"cf":"ericcson1","col":"accesspointnameni","type":"string"},\
+"causeforrecclosing":{"cf":"ericcson2","col":"causeforrecclosing","type":"string"},\
+"cdr_reason":{"cf":"ericcson3","col":"cdr_reason","type":"string"},\
+"duration":{"cf":"ericcson4","col":"duration","type":"string"},\
+"recordopeningtime":{"cf":"ericcson5","col":"recordopeningtime","type":"string"},\
+"servedimsi":{"cf":"ericcson6","col":"servedimsi","type":"string"},\
+"terminated_count":{"cf":"ericcson7","col":"terminated_count","type":"string"}}})
 
-cat_val = json.dumps({"table":{"namespace":"default", "name":"tbl_users_crossed_vollimit", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
-"accesspointnameni":{"cf":"ericcson","col":"accesspointnameni","type":"string"},\
-"causeforrecclosing":{"cf":"ericcson","col":"causeforrecclosing","type":"string"},\
-"cdr_reason":{"cf":"ericcson","col":"cdr_reason","type":"string"},\
-"duration":{"cf":"ericcson","col":"duration","type":"string"},\
-"recordopeningtime":{"cf":"ericcson","col":"recordopeningtime","type":"string"},\
-"servedimsi":{"cf":"ericcson","col":"servedimsi","type":"string"},\
-"limit_crossed_cnt":{"cf":"ericcson","col":"terminated_count","type":"string"}}})
+cat_val = json.dumps({"table":{"namespace":"default", "name":"tbl_users_crossed_vollimit_hb", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
+"accesspointnameni":{"cf":"ericcson1","col":"accesspointnameni","type":"string"},\
+"causeforrecclosing":{"cf":"ericcson2","col":"causeforrecclosing","type":"string"},\
+"cdr_reason":{"cf":"ericcson3","col":"cdr_reason","type":"string"},\
+"duration":{"cf":"ericcson4","col":"duration","type":"string"},\
+"recordopeningtime":{"cf":"ericcson5","col":"recordopeningtime","type":"string"},\
+"servedimsi":{"cf":"ericcson6","col":"servedimsi","type":"string"},\
+"limit_crossed_cnt":{"cf":"ericcson7","col":"terminated_count","type":"string"}}})
 
 
 df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org.apache.spark.sql.execution.datasources.hbase").load()
@@ -318,17 +318,16 @@ from tim_ericcson_bulk11 \
 where causeforrecclosing='16'\
 group by servedimsi,recordopeningtime")
 
-df12.show()
-
 df12.registerTempTable("tim_ericcson_bulk22")
 
-df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_reason,CAST(limit_crossed_cnt AS STRING) limit_crossed_cnt from tim_ericcson_bulk22")
+df21=sqlContext.sql("SELECT rowkey,causeforrecclosing,recordopeningtime,servedimsi,cdr_reason,CAST(limit_crossed_cnt AS STRING) limit_crossed_cnt from tim_ericcson_bulk22")
 
+df21.show()
 
 ##trial1="TBL_USERS_CROSSED_VOLLIMIT"
 
 try:    
-   df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+    df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
 except Exception as e:
    aa=2
 
