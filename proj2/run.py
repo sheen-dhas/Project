@@ -318,11 +318,13 @@ from tim_ericcson_bulk11 \
 where causeforrecclosing='16'\
 group by servedimsi,recordopeningtime")
 
+df12.show()
+
 df12.registerTempTable("tim_ericcson_bulk22")
 
 df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_reason,CAST(limit_crossed_cnt AS STRING) limit_crossed_cnt from tim_ericcson_bulk22")
 
-df21.show()
+
 ##trial1="TBL_USERS_CROSSED_VOLLIMIT"
 
 try:
