@@ -306,13 +306,13 @@ df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,
 
 ##trial1="TBL_USERS_AFFECTED_CNT"
 
-df11=sqlContext.sql("SELECT causeforrecclosing,\
+df11=sqlContext.sql("SELECT rowkey,causeforrecclosing,\
 CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,\
 'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='16'")
 
 df11.registerTempTable("tim_ericcson_bulk11")
 
-df12=sqlContext.sql("SELECT max(causeforrecclosing) causeforrecclosing,\
+df12=sqlContext.sql("SELECT max(rowkey) rowkey,max(causeforrecclosing) causeforrecclosing,\
 recordopeningtime,servedimsi,'Crossed volume Limit' cdr_reason ,count(servedimsi) limit_crossed_cnt \
 from tim_ericcson_bulk11 \
 where causeforrecclosing='16'\
@@ -327,12 +327,12 @@ df21=sqlContext.sql("SELECT causeforrecclosing,recordopeningtime,servedimsi,cdr_
 
 ##trial1="TBL_USERS_CROSSED_VOLLIMIT"
 
-try:
-   df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+try:    
+   df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
 except Exception as e:
    aa=2
 
-try:    
-   df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+try:
+   df2.write.option("catalog",cat).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
 except Exception as e:
    aa=2
