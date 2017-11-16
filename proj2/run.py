@@ -330,6 +330,6 @@ except Exception as e:
    aa=2
 
 try:    
-df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
+   df21.write.option("catalog",cat_val).option("newtable","4").format("org.apache.spark.sql.execution.datasources.hbase").save()
 except Exception as e:
    aa=2
