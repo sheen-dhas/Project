@@ -43,10 +43,20 @@ def word_cnt(sqlContext):
     a=df.count()
     return a
 
+def word_cnt1(sqlContext):
+    ###sqlContext= SQLContext(sc)
+    df=sqlContext.read.option("catalog",cat_val).option("newtable","2").format("org.apache.spark.sql.execution.datasources.hbase").load()
+    df.registerTempTable("tbl_users_crossed_vollimit_hb")
+    a=df.count()
+    return a
+
 class SampleTestWithPySparkTestCase(ReusedPySparkTestCase):
     def test_word_cnt(self):
         sqlContext= SQLContext(self.sc)
-        self.assertEqual(word_cnt(sqlContext),2)
+        self.assertEqual(word_cnt(sqlContext),1,msg='Table tbl_users_affected_cnt_hb does not match the expected result')
+    def test_word_cnt1(self):
+        sqlContext= SQLContext(self.sc)
+        self.assertEqual(word_cnt1(sqlContext),0,msg='Table tbl_users_crossed_vollimit_hb does not match the expected result')
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
