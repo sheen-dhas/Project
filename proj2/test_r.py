@@ -46,7 +46,7 @@ def word_cnt(sqlContext):
 class SampleTestWithPySparkTestCase(ReusedPySparkTestCase):
     def test_word_cnt(self):
         sqlContext= SQLContext(self.sc)
-        self.assertEqual(word_cnt(sqlContext),1)
+        self.assertEqual(word_cnt(sqlContext),2)
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
