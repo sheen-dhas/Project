@@ -3,6 +3,9 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
+cp core-site.xml /home
+chmod 777 core-site.xml
+
 apt-get -y update
 
 apt-get install -y openssh-server
@@ -14,6 +17,7 @@ apt-get install -y openssh-server
 /opt/hbase-server
 
 
+
 ##hbase shell ./sample_commands.txt
 
 ##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
@@ -21,6 +25,8 @@ apt-get install -y openssh-server
 ##hbase shell ./list.txt
 
 ##/usr/hadoop-2.7.3/sbin/stop-all.sh
+
+cp /home/core-site.xml /usr/hadoop-2.7.3/etc/hadoop
 
 hadoop namenode -format
 
