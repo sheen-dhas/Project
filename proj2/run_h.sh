@@ -3,8 +3,8 @@
 cp trial.csv /home
 chmod 777 trial.csv
 
-cp core-site.xml /home
-chmod 777 core-site.xml
+cp hosts /home
+chmod 777 hosts
 
 apt-get -y update
 
@@ -16,7 +16,8 @@ apt-get install -y openssh-server
 
 /opt/hbase-server
 
-
+rm /etc/hosts
+cp /home/hosts /etc/hosts
 
 ##hbase shell ./sample_commands.txt
 
@@ -24,15 +25,15 @@ apt-get install -y openssh-server
 
 ##hbase shell ./list.txt
 
-/usr/hadoop-2.7.3/sbin/stop-all.sh
+##/usr/hadoop-2.7.3/sbin/stop-all.sh
 
-rm /usr/hadoop-2.7.3/etc/hadoop/core-site.xml
+##rm /usr/hadoop-2.7.3/etc/hadoop/core-site.xml
 
-cp /home/core-site.xml /usr/hadoop-2.7.3/etc/hadoop
+##cp /home/core-site.xml /usr/hadoop-2.7.3/etc/hadoop
 
-hadoop namenode -format
+##hadoop namenode -format
 
-/usr/hadoop-2.7.3/sbin/start-all.sh
+##/usr/hadoop-2.7.3/sbin/start-all.sh
 
 hadoop fs -mkdir /tmp/tim_hfile
 
