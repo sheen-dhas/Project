@@ -20,6 +20,12 @@ apt-get install -y openssh-server
 
 ##hbase shell ./list.txt
 
+/usr/hadoop-2.7.3/sbin/stop-all.sh
+
+hadoop namenode -format
+
+/usr/hadoop-2.7.3/sbin/start-all.sh
+
 hadoop fs -mkdir /tmp/tim_hfile
 
 hadoop fs -mkdir /tmp/tim_hfile/ericcson
