@@ -32,4 +32,4 @@ hadoop fs -ls /tmp/tim_hfile/ericcson/
 
 hadoop fs -chmod 777 /tmp/tim_hfile/ericcson/646f8e796f044f1d8e459f2d28f4caab
 
-HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://tmp/tim_hfile/  tim_ericcson_bulk
+HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://6b696db2-817f-4f09-5746-d86d39ba907a/tmp/tim_hfile/  tim_ericcson_bulk
