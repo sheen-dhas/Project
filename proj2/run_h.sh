@@ -25,8 +25,6 @@ apt-get install -y openssh-server
 
 ##hbase shell
 
-hadoop fs -copyFromLocal /home/trial.csv /tmp/
-
 hbase shell ./sample_commands.txt
 
 ##echo "list" | hbase shell
