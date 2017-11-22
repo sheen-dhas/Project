@@ -28,7 +28,7 @@ apt-get install -y openssh-server
 
 cp /home/core-site.xml /usr/hadoop-2.7.3/etc/hadoop
 
-hadoop namenode -format
+##hadoop namenode -format
 
 ##/usr/hadoop-2.7.3/sbin/start-all.sh
 
