@@ -19,13 +19,13 @@ sc = SparkContext(conf = conf)
 
 sqlContext= SQLContext(sc)
 
-file_t=sc.textFile("hdfs://tmp/trial.csv")
+##file_t=sc.textFile("hdfs://tmp/trial.csv")
 
-file_mp=file_t.map(lambda l: l.split(","))
+##file_mp=file_t.map(lambda l: l.split(","))
 
-file_df=sqlContext.createDataFrame(file_mp)
+##file_df=sqlContext.createDataFrame(file_mp)
 
-file_df.show()
+##file_df.show()
 
 cat_main = json.dumps({"table":{"namespace":"default", "name":"tim_ericcson_bulk", "tablecoder":"primitivetype"},"rowkey":"rowkey","columns":{"rowkey":{"cf":"rowkey", "col":"rowkey","type":"string"},\
 "client":{"cf":"ericcson","col":"client","type":"string"},\
