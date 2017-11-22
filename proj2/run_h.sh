@@ -1,12 +1,7 @@
 #!/bin/sh
 
-##cp spark-env.sh /home/build-spark/rootfs/usr/spark-2.2.0/conf
-##chmod 777 spark-env.sh
-
 cp trial.csv /home
 chmod 777 trial.csv
-
-##. /opt/hbase-server > a.out
 
 apt-get -y update
 
@@ -19,66 +14,20 @@ apt-get install -y openssh-server
 /opt/hbase-server
 
 
-##/opt/hbase/bin/start-hbase.sh
+##hbase shell ./sample_commands.txt
 
-# /opt/hbase/bin/zookeepers.sh start
+##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
-##hbase shell
+##hbase shell ./list.txt
 
-hbase shell ./sample_commands.txt
+hadoop fs -mkdir /tmp/tim_hfile
 
-##echo "list" | hbase shell
+hadoop fs -mkdir /tmp/tim_hfile/ericcson
 
-##ssh gpadmin@10.63.33.203
+hadoop fs -copyFromLocal /tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f044f1d8e459f2d28f4caab /tmp/tim_hfile/ericcson/
 
-##ls /*
+hadoop fs -chmod -R 0777 /tmp/tim_hfile/ericcson/*
 
-##cd /home/build-spark
+hadoop fs -ls /
 
-##ls /home/build-spark/*
-
-###ls /home/build-spark/rootfs/usr/hadoop-2.7.3/*
-
-###export HADOOP_HOME=/home/build-spark/rootfs/usr/hadoop-2.7.3
-###export PATH=$PATH:/home/build-spark/rootfs/usr/hadoop-2.7.3/bin
-###export SPARK_DIST_CLASSPATH=/home/build-spark/rootfs/usr/hadoop-2.7.3/bin/hadoop
-
-
-##ls /home/build-spark/rootfs/usr/jdk1.8.0_131/*
-##ls /home/build-spark/rootfs/usr/java/*
-
-##export JAVA_HOME=/usr/jdk1.8.0_131
-##export PATH=$PATH:/usr/jdk1.8.0_131/bin
-
-##ls /home/build-spark/rootfs/*
-
-##ls /home/build-spark/rootfs/usr/spark-2.2.0/*
-
-###hadoop version
-
-###cd /home/build-spark/rootfs/usr/spark-2.2.0/bin
-
-###pyspark
-
-spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
-
-hbase shell ./list.txt
-
-##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ test_r.py
-
-##spark-submit 
-
-###/rootfs/usr/spark-2.2.0/bin/spark-submit run.py
-
-
-##3spark-submit run.py
-
-###hbase shell
-
-##cd /opt/phoenix-4.4.0-HBase-1.1-bin/bin
-
-##./sqlline.py localhost:/hbase-unsecure
-
-# cd /home/build-hbase
-
-# ls /*
+##HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://57c5d287-bdcc-42b1-7265-f6db83263719:8020/tmp/tim_hfile/  tim_ericcson_bulk
