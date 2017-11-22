@@ -5,6 +5,8 @@
 
 ls
 
+#
+
 
 cp hbase_commands.txt /home
 chmod 777 hbase_commands.txt
