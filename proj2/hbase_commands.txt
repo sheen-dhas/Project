@@ -1,0 +1,1 @@
+create 'tim_ericcson_bulk_2' , 'ericcson'
