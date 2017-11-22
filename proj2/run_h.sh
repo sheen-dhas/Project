@@ -14,20 +14,20 @@ apt-get install -y openssh-server
 /opt/hbase-server
 
 
-##hbase shell ./sample_commands.txt
+hbase shell ./sample_commands.txt
 
-##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
+spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
-##hbase shell ./list.txt
+hbase shell ./list.txt
 
-hadoop fs -mkdir /tmp/tim_hfile
+##hadoop fs -mkdir /tmp/tim_hfile
 
-hadoop fs -mkdir /tmp/tim_hfile/ericcson
+##hadoop fs -mkdir /tmp/tim_hfile/ericcson
 
-hadoop fs -copyFromLocal /tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f044f1d8e459f2d28f4caab /tmp/tim_hfile/ericcson/
+##hadoop fs -copyFromLocal /tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f044f1d8e459f2d28f4caab /tmp/tim_hfile/ericcson/
 
-hadoop fs -chmod -R 0777 /tmp/tim_hfile/ericcson/*
+##hadoop fs -chmod -R 0777 /tmp/tim_hfile/ericcson/*
 
-hadoop fs -ls /
+##hadoop fs -ls /
 
 ##HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://57c5d287-bdcc-42b1-7265-f6db83263719:8020/tmp/tim_hfile/  tim_ericcson_bulk
