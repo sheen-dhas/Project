@@ -38,4 +38,4 @@ hadoop fs -ls /tmp/tim_hfile/ericcson/
 
 ##hadoop fs -ls /tmp/tim_hfile/ericcson/646f8e796f044f1d8e459f2d28f4caab
 
-HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://ee075186-fdd0-4381-58ec-c60a5d3b16cc/10.254.0.26:9000/tmp/tim_hfile/  tim_ericcson_bulk
+HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload hdfs://127.0.0.1/tmp/tim_hfile/  tim_ericcson_bulk
