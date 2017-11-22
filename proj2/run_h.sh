@@ -24,15 +24,15 @@ apt-get install -y openssh-server
 
 ##hbase shell ./list.txt
 
-##/usr/hadoop-2.7.3/sbin/stop-all.sh
+/usr/hadoop-2.7.3/sbin/stop-all.sh
 
 rm /usr/hadoop-2.7.3/etc/hadoop/core-site.xml
 
 cp /home/core-site.xml /usr/hadoop-2.7.3/etc/hadoop
 
-##hadoop namenode -format
+hadoop namenode -format
 
-##/usr/hadoop-2.7.3/sbin/start-all.sh
+/usr/hadoop-2.7.3/sbin/start-all.sh
 
 hadoop fs -mkdir /tmp/tim_hfile
 
