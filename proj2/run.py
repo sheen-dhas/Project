@@ -290,14 +290,14 @@ df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org
 df.registerTempTable("tim_ericcson_bulk")
 
 df1=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,\
-CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,servedimei,servedimsi from tim_ericcson_bulk where causeforrecclosing='17'")
+CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,servedimei,servedimsi from tim_ericcson_bulk where causeforrecclosing='22'")
 
 df1.registerTempTable("tim_ericcson_bulk1")
 
 df1=sqlContext.sql("SELECT max(rowkey) rowkey,max(accesspointnameni) accesspointnameni,max(causeforrecclosing) causeforrecclosing,max(duration) duration,\
 recordopeningtime,servedimsi,'Abnormal Termination' cdr_reason ,count(servedimsi) terminated_count \
 from tim_ericcson_bulk1 \
-where causeforrecclosing='4'\
+where causeforrecclosing='22'\
 group by servedimsi,recordopeningtime")
 
 df1.registerTempTable("tim_ericcson_bulk2")
@@ -308,14 +308,14 @@ df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,
 
 df11=sqlContext.sql("SELECT rowkey,causeforrecclosing,\
 CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,\
-'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='22'")
+'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='17'")
 
 df11.registerTempTable("tim_ericcson_bulk11")
 
 df12=sqlContext.sql("SELECT max(rowkey) rowkey,max(causeforrecclosing) causeforrecclosing,\
 recordopeningtime,servedimsi,'Crossed volume Limit' cdr_reason ,count(servedimsi) limit_crossed_cnt \
 from tim_ericcson_bulk11 \
-where causeforrecclosing='16'\
+where causeforrecclosing='17'\
 group by servedimsi,recordopeningtime")
 
 df12.registerTempTable("tim_ericcson_bulk22")
