@@ -7,8 +7,8 @@ ls
 cp run.sh /home
 chmod 777 run_hbase.sh
 
-cp sample_commands.txt /home
-chmod 777 hbase_commands.txt
+cp list.txt /home
+chmod 777 list.txt
 
 apk update
 
@@ -19,7 +19,7 @@ apk add sshpass
 apk add scp
 
 sshpass -p 'Welcome@321' scp -o "StrictHostKeyChecking no" run_hbase.sh hduser1@10.63.33.207:/home/hduser1
-sshpass -p 'Welcome@321' scp -o "StrictHostKeyChecking no" hbase_commands.txt hduser1@10.63.33.207:/home/hduser1
+sshpass -p 'Welcome@321' scp -o "StrictHostKeyChecking no" list.txt hduser1@10.63.33.207:/home/hduser1
 
 
 sshpass -p 'Welcome@321' ssh -o "StrictHostKeyChecking no" hduser1@10.63.33.207 <<!
