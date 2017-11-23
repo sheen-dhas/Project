@@ -19,7 +19,7 @@ apt-get install -y openssh-server
 ##rm /etc/hosts
 ##cp /home/hosts /etc/hosts
 
-hbase shell ./sample_commands.txt
+##hbase shell ./sample_commands.txt
 
 
 ##hbase shell ./list.txt
