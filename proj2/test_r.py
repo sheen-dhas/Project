@@ -56,7 +56,7 @@ class SampleTestWithPySparkTestCase(ReusedPySparkTestCase):
         self.assertEqual(word_cnt(sqlContext),1,msg='Table tbl_users_affected_cnt_hb does not match the expected result')
     def test_word_cnt1(self):
         sqlContext= SQLContext(self.sc)
-        self.assertEqual(word_cnt1(sqlContext),1,msg='Table tbl_users_crossed_vollimit_hb does not match the expected result')
+        self.assertEqual(word_cnt1(sqlContext),6,msg='Table tbl_users_crossed_vollimit_hb does not match the expected result')
 
 if __name__ == '__main__':
     unittest.main(verbosity = 2)
