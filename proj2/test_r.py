@@ -53,7 +53,7 @@ def word_cnt1(sqlContext):
 class SampleTestWithPySparkTestCase(ReusedPySparkTestCase):
     def test_word_cnt(self):
         sqlContext= SQLContext(self.sc)
-        self.assertEqual(word_cnt(sqlContext),1,msg='Table tbl_users_affected_cnt_hb does not match the expected result')
+        self.assertEqual(word_cnt(sqlContext),13,msg='Table tbl_users_affected_cnt_hb does not match the expected result')
     def test_word_cnt1(self):
         sqlContext= SQLContext(self.sc)
         self.assertEqual(word_cnt1(sqlContext),6,msg='Table tbl_users_crossed_vollimit_hb does not match the expected result')
