@@ -21,7 +21,6 @@ apt-get install -y openssh-server
 
 ##hbase shell ./sample_commands.txt
 
-##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
 ##hbase shell ./list.txt
 
@@ -44,5 +43,7 @@ hadoop fs -copyFromLocal /tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f0
 hadoop fs -chmod -R 0777 /tmp/tim_hfile/ericcson/*
 
 HADOOP_CLASSPATH=`/opt/hbase/bin/hbase classpath` /usr/hadoop-2.7.3/bin/hadoop jar /opt/hbase/lib/hbase-server-1.2.4.jar completebulkload /tmp/tim_hfile/  tim_ericcson_bulk
+
+spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
 hbase shell ./list.txt
