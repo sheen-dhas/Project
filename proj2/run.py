@@ -290,7 +290,7 @@ df=sqlContext.read.option("catalog",cat_main).option("newtable","2").format("org
 df.registerTempTable("tim_ericcson_bulk")
 
 df1=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,\
-CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,servedimei,servedimsi from tim_ericcson_bulk where causeforrecclosing='4'")
+CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,servedimei,servedimsi from tim_ericcson_bulk where causeforrecclosing='17'")
 
 df1.registerTempTable("tim_ericcson_bulk1")
 
@@ -308,7 +308,7 @@ df2=sqlContext.sql("SELECT rowkey,accesspointnameni,causeforrecclosing,duration,
 
 df11=sqlContext.sql("SELECT rowkey,causeforrecclosing,\
 CONCAT(substring(recordopeningtime,1,4),'-',substring(recordopeningtime,5,2),'-',substring(recordopeningtime,7,2),' ','00:00:00.000') AS recordopeningtime,\
-'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='16'")
+'Exceeded Volume Limit' cdr_reason ,servedimsi from tim_ericcson_bulk where causeforrecclosing='22'")
 
 df11.registerTempTable("tim_ericcson_bulk11")
 
