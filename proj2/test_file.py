@@ -39,7 +39,7 @@ class TextAnalysisTests(unittest.TestCase):
 
     def setUp(self):
         """Fixture that creates a file for the text methods to use."""
-        self.filename = '/tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f044f1d8e459f2d28f4caab'
+        self.filename = 'trial.csv'
         f = open(self.filename, 'r')
 
 
@@ -62,7 +62,7 @@ class TextAnalysisTests(unittest.TestCase):
     def test_no_such_file(self):
         """Check the proper exception is thrown for a missing file."""
         with self.assertRaises(IOError):
-            analyze_text('/tmp/build/df6ad190/resource-tutorial/proj2/646f8e796f044f1d8e459f2d28f4caab')
+            analyze_text('trial.csv')
 
     def test_no_deletion(self):
         """Check that the function doesn't delete the input file."""
