@@ -1,7 +1,7 @@
 list
 
-scan 'tim_ericcson_bulk'
+##scan 'tim_ericcson_bulk'
 scan 'tbl_users_affected_cnt_hb'
-##scan 'tbl_users_crossed_vollimit_hb'
+scan 'tbl_users_crossed_vollimit_hb'
 
 exit
